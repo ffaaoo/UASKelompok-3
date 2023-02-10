@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2023 at 01:08 AM
+-- Generation Time: Feb 10, 2023 at 01:55 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -70,12 +70,12 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(7, '2014_10_12_000000_create_users_table', 1),
-(8, '2014_10_12_100000_create_password_resets_table', 1),
-(9, '2019_08_19_000000_create_failed_jobs_table', 1),
-(10, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(11, '2023_02_05_132616_create_dvd_table', 1),
-(12, '2023_02_07_131212_add_role', 1);
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2019_08_19_000000_create_failed_jobs_table', 1),
+(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(5, '2023_02_05_132616_create_dvd_table', 1),
+(6, '2023_02_07_131212_add_role', 1);
 
 -- --------------------------------------------------------
 
@@ -131,8 +131,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
-(1, 'foru', 'admin@example.com', NULL, '$2y$10$0l9ZzobMeEQQfmA4In/1D.ILZEvmEjeWyhsmswJRW9zVoFf9nRLRK', NULL, '2023-02-09 07:31:31', '2023-02-09 07:31:31', 1),
-(2, 'froz', 'user@example.com', NULL, '$2y$10$yXeBMQ5cMJRg62OkJY0TtuvjLp7XZxgz9G26Zw.WBxX6KzOu5Fs.S', NULL, '2023-02-09 23:58:40', '2023-02-09 23:58:40', 0);
+(1, 'admin', 'admin@example.com', NULL, '$2y$10$AzUFmCRhVwrfPG9KPfGZjuYuzml1pdIgvZc5ErrP2jQoihe/s9wTu', NULL, NULL, NULL, 1),
+(2, 'user', 'user@example.com', NULL, '$2y$10$4fp6bIxskOrCaVDfGqlzWO/Nf6/9O/WVx83ISkfKM0BjalQdnG3cq', NULL, NULL, NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -186,7 +186,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `dvd`
 --
 ALTER TABLE `dvd`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -198,7 +198,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
