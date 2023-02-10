@@ -36,10 +36,10 @@ role <br>
 #### Login Admin
 
 -   email = admin@example.com
--   password = 123123123
+-   password = 123
 
 #### Login User
 
 -   email = user@example.com
--   password = 123123123
+-   password = 123
 
